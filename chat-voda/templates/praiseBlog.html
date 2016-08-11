@@ -1,0 +1,22 @@
+<template name="praiseBlog">
+	<div class="praiseBlog">
+
+			<div class="pludit-form">
+				<!-- add a form below the h1 -->
+				<br>
+				{{#if currentUser}}
+				{{> showPlaudits2}}
+				<form class="newPraisePostForm">
+					<textarea style="width: 100%;" class="addNewPraisePost" type="textarea" name="text" placeholder="Message....."></textarea>
+					<input style="width: 100%;" type="submit" class="submit-plaudit" value="Send Chat">
+				</form>
+				{{else}}
+					<h3>Please Login above to chat</h3>
+				{{/if}}
+			</div>
+	</div>
+</template>
+
+
+
+

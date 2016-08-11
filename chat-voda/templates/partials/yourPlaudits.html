@@ -1,0 +1,15 @@
+<template name="yourPlaudits">
+	<div class="praiseBlog">
+		<div class="plaudit-post-wrapper">
+			<div class="pludit-form col-xs-12 col-sm-12 col-lg-8">
+				<h3>Some Thanks you gave</h3>
+					{{#each praisePosts}} {{> myPosts}} {{/each}}
+				<h3>Some Thanks you recieved</h3>
+					{{#each praisePosts}} {{> recievedPosts}} {{/each}}
+			</div>
+		</div>
+
+	</div>
+</template>
+
+

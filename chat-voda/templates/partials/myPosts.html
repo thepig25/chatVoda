@@ -1,0 +1,27 @@
+<template name="myPosts">
+	<div class="praisePost">
+		{{#if isOwner}}
+			<div class="avatar-div col-lg-2">
+				{{> avatar
+					user=this
+					size="large"
+					shape="circle"
+					class="voda-avatar"
+					txtColor="#E60000"
+			    }}
+			</div>
+			<div class="plaudit-single-div col-lg-10">
+				<h2 class="praisePostUser">
+					{{plaudit}}<span> - recieved @ {{createdAtFormatted}}</span>
+				</h2>
+				<h2 class="praisePostValue">
+					{{text}}
+				</h2>
+				<h2 class="praisePostUser">
+				Sent by {{username}}
+				</h2>
+					<button class="delete btn btn-primary btn-lg">Delete Post &times;</button>				
+			</div>
+		{{/if}}
+	</div>
+</template>

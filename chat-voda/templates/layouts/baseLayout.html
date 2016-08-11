@@ -1,0 +1,23 @@
+<template name="baseLayout">
+	<head>
+		<meta name="viewport" content="initial-scale=1">
+		<title>Strata App</title>
+
+	</head>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span12">
+				{{> header}}
+			</div>
+
+		</div>
+
+		<div class="row-fluid">
+			<div class="span12">
+				{{> yield}}
+			</div>
+		</div>
+
+
+	</div>
+</template>

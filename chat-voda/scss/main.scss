@@ -1,0 +1,400 @@
+@font-face {
+  font-family: vodadone;
+  src: url("fonts/vodafoneptyrg-webfont.eot");
+  src: url("fonts/vodafoneptyrg-webfont.eot?") format("â˜º"), url("fonts/vodafoneptyrg-webfont.woff") format("woff"), url("fonts/vodafoneptyrg-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.newPraisePostForm {
+	position: fixed;
+    bottom: 0px;
+    width: 90%;
+    margin-top: 20px;
+    background: white !important;
+}
+body {
+	font-family: vodafone;
+	background: grey;
+	-webkit-font-smoothing: antialiased;
+	.btn-primary{
+		background-color: #D22B0E;
+		border-color: white;
+		&:hover{
+			background-color: #D22B0E;
+			border-color: white;
+		}
+	}
+}
+
+h2 {
+	font-size: 30px;
+	color: white;
+	font-family: vodafone;
+	-webkit-font-smoothing: antialiased
+}
+.navbar {
+	li {
+		border-right: 1px solid white;
+		a:hover {
+			text-decoration: underline;
+			cursor: pointer;
+		}
+	}
+	.login-li {
+		 padding-top: 10px;
+		 padding-right: 10px;
+    	padding-left: 10px;
+    	border-right: none;
+	}
+	.non-login-li {
+		a{
+			font-size: 20px;
+			color: white !important;
+		}
+	}
+	#login-dropdown-list {
+		border-right: none;
+		.btn-primary{
+			background-color: #D22B0E;
+			border-color: white;
+		}
+		font-size: 20px;
+		a {
+			color: white;
+		}
+		.dropdown-menu {
+			a {
+				color: #337ab7;
+			}
+		}
+	}
+	.nav .open > a {
+		background-color: transparent;
+	}
+}
+.container-fluid {
+	-webkit-font-smoothing: antialiased;
+	background-color: white;
+
+	.praiseBlog {
+		label {
+			font-weight: bold;
+			width: 100%;
+			text-align: left;
+		}
+		input {
+			background-color: #D22B0E;
+			color: #fff !important;
+			border: 1px solid white;
+			border-radius: 4px;
+
+		}
+		select {
+			border-radius: 4px;
+		}
+		textarea {
+			border-radius: 4px;
+		}
+		margin-top: 30px;
+	}
+
+	.praisePost {
+		text-align: left;
+		.voda-avatar {
+			float: left;
+		}
+		.praisePostUser {
+			color: #E60000;
+			span {
+				color: #848482;
+			}
+		}
+		.praisePostValue {
+			color: black;
+		}
+	}
+	.welcome {
+		margin-top: 100px;
+	}
+}
+.navbar-collapse {
+	overflow: visible !important;
+}
+.navbar {
+	background-color: #E60000;
+	color:white;
+}
+@media (max-width: 768px) {
+	.give-plaudit-container {
+		background: #E60000 !important;
+	}
+	.pludit-thanks {
+		min-height: 200px;
+	}
+}
+.slick-prev, .slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  padding: 0;
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: transparent;
+  &:before{
+	  font-size: 20px;
+	  line-height: 1;
+	  opacity: .75;
+	  color: black;
+	  -webkit-font-smoothing: antialiased;
+  }
+}
+.slick-next {
+	left: -25px;
+	&:before {
+		content: "prev";
+	}
+}
+.slick-prev {
+	right: -25px;
+	&:before {
+		content: "next";
+	}
+}
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Toggle Styles */
+
+#menu-toggle {
+
+	position: absolute;
+	top: 62px;
+	left: 12px;
+}
+
+#wrapper {
+	padding-left: 0;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+	padding-left: 250px;
+}
+
+
+
+#page-content-wrapper {
+	width: 100%;
+	padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+	position: absolute;
+	margin-right: -250px;
+}
+
+
+/* Slider */
+
+.slick-slider {
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+	-webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+	position: relative;
+	overflow: hidden;
+	display: block;
+	margin: 0;
+	padding: 0;
+
+	&:focus {
+		outline: none;
+	}
+
+	&.dragging {
+		cursor: pointer;
+		cursor: hand;
+	}
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+	position: relative;
+	left: 0;
+	top: 0;
+	display: block;
+
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+
+	.slick-loading & {
+		visibility: hidden;
+	}
+}
+.slick-slide {
+	float: left;
+	height: 100%;
+	min-height: 1px;
+	[dir="rtl"] & {
+		float: right;
+	}
+	img {
+		display: block;
+	}
+	&.slick-loading img {
+		display: none;
+	}
+
+	display: none;
+
+	&.dragging img {
+		pointer-events: none;
+	}
+
+	.slick-initialized & {
+		display: block;
+	}
+
+	.slick-loading & {
+		visibility: hidden;
+	}
+
+	.slick-vertical & {
+		display: block;
+		height: auto;
+		border: 1px solid transparent;
+	}
+}
+
+
+$lgreen:#51e980;
+$blue:#D22B0E;
+$lred:#E57373;
+
+.chat-box {
+	float:left;
+	width:100%;
+	height:65vh;
+	margin-top: 30px;
+	border-radius:0 10px 10px 0;
+	overflow: scroll;
+	&.presenter {
+		height: 100vh !important;
+	}
+
+	ul {
+		list-style-type:none;
+		padding:0;
+		display:block;
+
+
+		li {
+			.title {
+				color:#D22B0E;
+				text-align:center;
+				border-bottom:1px solid #D22B0E;
+				margin-bottom:3px;
+			}
+
+			&>div {
+				margin-bottom: 20px;
+				.img {
+					display:inline-block;
+					width:50px;
+					height:50px;
+					background:#fff;
+					border-radius:50%;
+					margin-bottom:-25px;
+					border:2px solid $blue;
+					z-index:100;
+					position:relative;
+				}
+				.name {
+					display:inline-block;
+					padding: 17px 0px 6px 5px;
+					margin-top:-20px;
+					margin-right:-30px;
+					background-color:$blue;
+					color:#fff;
+					border-radius:15px 0 0 0;
+					font-size:13px;
+					position:relative;
+					width: 90%;
+				}
+				.text {
+
+					div {
+						background-color:#fff;
+						display:inline-block;
+						padding: 15px;
+						width: 90%;
+						border-radius:10px 0 10px 10px;
+						z-index:10;
+						position:relative;
+						text-align:left;
+						font-size: 25px;
+						border: 2px solid #D22B0E;
+					}
+				}
+			}
+
+			.you {
+				.name {
+					padding:5px 25px 5px 50px;
+					margin-left:-30px;
+					border-radius:0 15px 0 0;
+				}
+				.text {
+					div {
+						margin-left:6px;
+						border-radius:0 10px 10px 10px;
+						text-align:left;
+					}
+				}
+			}
+
+		}
+	}
+
+}
+
+
+
