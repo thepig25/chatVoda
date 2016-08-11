@@ -78,6 +78,15 @@ Template.praiseBlog.helpers({
 	}
 
 });
+Template.showPlaudits2.onRendered(function () {
+	$(".chat-box").animate({ scrollTop: $(".chat-box")[0].scrollHeight }, 1000);
+});
+Template.showPlaudits.onRendered(function () {
+	$(".chat-box").animate({ scrollTop: $(".chat-box")[0].scrollHeight }, 1000);
+});
+Template.praisePost.onRendered(function () {
+	$(".chat-box").animate({ scrollTop: $(".chat-box")[0].scrollHeight }, 1000);
+});
 
 Template.showPlaudits.helpers({
 	praisePosts: function() {
