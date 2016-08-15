@@ -3,17 +3,11 @@ Accounts.config({ restrictCreationByEmailDomain: 'vodafone.com.au' })
 
 Meteor.methods({
 	addPost: function(text, plaudit) {
-		// Make sure the user is logged in before inserting a task
-		if (!Meteor.userId()) {
-			throw new Meteor.Error('not-authorized');
-		}
 
 		PraisePosts.insert({
 			text: text,
 			plaudit: plaudit,
-			createdAt: new Date(),
-			owner: Meteor.userId(),
-			username: Meteor.user().username
+			createdAt: new Date()
 		});
 	},
 

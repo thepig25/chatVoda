@@ -4,7 +4,6 @@
 			<div class="pludit-form">
 				<!-- add a form below the h1 -->
 				<br>
-				{{#if currentUser}}
 				{{> showPlaudits2}}
 				<div class="stickySend">
 					<form class="newPraisePostForm">
@@ -12,9 +11,6 @@
 						<input style="width: 100%;" type="submit" class="submit-plaudit" value="Send Chat">
 					</form>
 				</div>
-				{{else}}
-					<h3>Please Login above to chat</h3>
-				{{/if}}
 			</div>
 	</div>
 </template>
