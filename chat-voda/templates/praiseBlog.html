@@ -6,10 +6,12 @@
 				<br>
 				{{#if currentUser}}
 				{{> showPlaudits2}}
-				<form class="newPraisePostForm">
-					<textarea style="width: 100%;" class="addNewPraisePost" type="textarea" name="text" placeholder="Message....."></textarea>
-					<input style="width: 100%;" type="submit" class="submit-plaudit" value="Send Chat">
-				</form>
+				<div class="stickySend">
+					<form class="newPraisePostForm">
+						<textarea style="width: 100%;" class="addNewPraisePost" type="textarea" name="text" placeholder="Message....."></textarea>
+						<input style="width: 100%;" type="submit" class="submit-plaudit" value="Send Chat">
+					</form>
+				</div>
 				{{else}}
 					<h3>Please Login above to chat</h3>
 				{{/if}}
