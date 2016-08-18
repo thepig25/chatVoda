@@ -336,15 +336,21 @@ $lred:#E57373;
 		@media (min-width: 768px) {
 			.praisePost {
 				text-align: center;
-				width: 20%;
+				width: 30%;
 				float: left;
 				margin-left: 50px;
 			}
 			ul {
 				li {
+					min-height: 300px;
 					div {
 						padding: 10px !important;
 						font-size: 18px !important;
+						min-height: 200px;
+						display: flex;
+						justify-content: center;
+						flex-direction: column;
+						text-align: center;
 					}
 				}
 			}
