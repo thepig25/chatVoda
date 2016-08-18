@@ -95,13 +95,13 @@ Template.praiseBlog.helpers({
 
 });
 Template.showPlaudits2.onRendered(function () {
-	$(".chat-box").animate({ scrollTop: $(".chat-box")[0].scrollHeight }, 1000);
+	 $(".chat-box").scrollTop($(".chat-box")[0].scrollHeight);;
 });
 Template.showPlaudits.onRendered(function () {
-	$(".chat-box").animate({ scrollTop: $(".chat-box")[0].scrollHeight }, 1000);
+	 $(".chat-box").scrollTop($(".chat-box")[0].scrollHeight);
 });
 Template.praisePost.onRendered(function () {
-	$(".chat-box").animate({ scrollTop: $(".chat-box")[0].scrollHeight }, 1000);
+	$(".chat-box").scrollTop($(".chat-box")[0].scrollHeight);
 });
 
 Template.showPlaudits.helpers({
