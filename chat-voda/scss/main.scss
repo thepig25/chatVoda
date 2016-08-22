@@ -22,6 +22,9 @@
 
 	}
 }
+.container {
+	height: 61px;
+}
 body {
 	font-family: vodafone;
 	overflow: auto;
@@ -42,9 +45,51 @@ h2 {
 	font-family: vodafone;
 	-webkit-font-smoothing: antialiased
 }
+.mainTitle {
+	h1 {
+		color: #00bdac !important;
+		font-size: 20pt !important;
+		font-weight: bold;
+	}
+}
+.arrow-down {
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	margin: 0 auto;
+	border-top: 20px solid white;
+}
+.icon-bar {
+	background-color: #b0b0b0 !important;
+}
+.navbar-collapse {
+	background-color: white !important;
+}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: white !important;
+    border: #b0b0b0 !important;
+}
+.navbar-header {
+	@media (max-width: 768px) {
+		position: absolute;
+		 top: 10px;
+	    right: 5px;
+	}
+}
 .navbar {
+
+	border: none !important;
+
+	.navbar-nav {
+		@media (min-width: 768px) {
+			position: absolute !important;
+			right: 20px !important;
+			top: 10px !important;
+		}
+	}
 	li {
-		border-right: 1px solid white;
+		border-left: 1px solid #00bdac !important;
 		a:hover {
 			text-decoration: underline;
 			cursor: pointer;
@@ -59,7 +104,7 @@ h2 {
 	.non-login-li {
 		a{
 			font-size: 20px;
-			color: black !important;
+			color: #bcbabd !important;
 		}
 	}
 	#login-dropdown-list {
@@ -84,7 +129,7 @@ h2 {
 }
 .container-fluid {
 	-webkit-font-smoothing: antialiased;
-	background-color: white;
+	background-color: #f6f6f6;
 
 	.praiseBlog {
 		label {
@@ -134,8 +179,9 @@ h2 {
 	overflow: visible !important;
 }
 .navbar {
-	background-color: #11c1f3;
+	background-color: #ffffff;
 	color:black;
+	text-align: center;
 }
 @media (max-width: 768px) {
 	.give-plaudit-container {
@@ -332,7 +378,7 @@ $lred:#E57373;
 	&.presenter {
 		height: 90vh !important;
 		max-height: 90vh;
-	    margin-top: 40px !important;
+	    margin-top: 80px !important;
 		@media (min-width: 768px) {
 			.praisePost {
 				text-align: center;
@@ -373,7 +419,7 @@ $lred:#E57373;
 
 			&>div {
 				margin-bottom: 20px;
-				background: #007AFF !important;
+				background: #d0cccc !important;
 				border-radius: 10px !important;
 				.img {
 					display:none;
@@ -386,7 +432,7 @@ $lred:#E57373;
 					div {
 						padding: 10px;
 						color: white !important;
-						font-size: 12px;
+						font-size: 16pt;
 					}
 				}
 			}
