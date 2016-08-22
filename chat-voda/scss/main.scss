@@ -5,22 +5,32 @@
   font-weight: normal;
   font-style: normal;
 }
-.newPraisePostForm {
-	position: fixed;
-    bottom: 0px;
+.stickySend {
+    float: left;
+    height: 100px;
+    position: fixed;
+    bottom: 30px;
     width: 90%;
-    margin-top: 20px;
-    background: white !important;
+    border-top: 3px solid black;
+    padding-top: 10px;
+
+}
+.newPraisePostForm {
+	width: 100%;
+	background: white !important;
+	input {
+
+	}
 }
 body {
 	font-family: vodafone;
-	background: grey;
+	overflow: auto;
 	-webkit-font-smoothing: antialiased;
 	.btn-primary{
-		background-color: #D22B0E;
+		background-color: #11c1f3;
 		border-color: white;
 		&:hover{
-			background-color: #D22B0E;
+			background-color: #11c1f3;
 			border-color: white;
 		}
 	}
@@ -28,7 +38,7 @@ body {
 
 h2 {
 	font-size: 30px;
-	color: white;
+	color: black;
 	font-family: vodafone;
 	-webkit-font-smoothing: antialiased
 }
@@ -49,22 +59,22 @@ h2 {
 	.non-login-li {
 		a{
 			font-size: 20px;
-			color: white !important;
+			color: black !important;
 		}
 	}
 	#login-dropdown-list {
 		border-right: none;
 		.btn-primary{
-			background-color: #D22B0E;
+			background-color: #11c1f3;
 			border-color: white;
 		}
 		font-size: 20px;
 		a {
-			color: white;
+			color: black;
 		}
 		.dropdown-menu {
 			a {
-				color: #337ab7;
+				color: black;
 			}
 		}
 	}
@@ -83,10 +93,12 @@ h2 {
 			text-align: left;
 		}
 		input {
-			background-color: #D22B0E;
-			color: #fff !important;
+			background-color: #007AFF;
+			color: white !important;
 			border: 1px solid white;
 			border-radius: 4px;
+			font-size: 20px;
+			padding: 5px;
 
 		}
 		select {
@@ -94,6 +106,7 @@ h2 {
 		}
 		textarea {
 			border-radius: 4px;
+			height: 60px;
 		}
 		margin-top: 30px;
 	}
@@ -121,8 +134,8 @@ h2 {
 	overflow: visible !important;
 }
 .navbar {
-	background-color: #E60000;
-	color:white;
+	background-color: #11c1f3;
+	color:black;
 }
 @media (max-width: 768px) {
 	.give-plaudit-container {
@@ -306,18 +319,42 @@ h2 {
 
 
 $lgreen:#51e980;
-$blue:#D22B0E;
+$blue:#11c1f3;
 $lred:#E57373;
 
 .chat-box {
 	float:left;
 	width:100%;
-	height:65vh;
-	margin-top: 30px;
+	height: 60vh;
+	max-height: 60vh;
 	border-radius:0 10px 10px 0;
-	overflow: scroll;
+	overflow-y: auto;
 	&.presenter {
-		height: 100vh !important;
+		height: 90vh !important;
+		max-height: 90vh;
+	    margin-top: 40px !important;
+		@media (min-width: 768px) {
+			.praisePost {
+				text-align: center;
+				width: 30%;
+				float: left;
+				margin-left: 50px;
+			}
+			ul {
+				li {
+					min-height: 300px;
+					div {
+						padding: 10px !important;
+						font-size: 18px !important;
+						min-height: 200px;
+						display: flex;
+						justify-content: center;
+						flex-direction: column;
+						text-align: center;
+					}
+				}
+			}
+		}
 	}
 
 	ul {
@@ -328,50 +365,28 @@ $lred:#E57373;
 
 		li {
 			.title {
-				color:#D22B0E;
+				color:#11c1f3;
 				text-align:center;
-				border-bottom:1px solid #D22B0E;
+				border-bottom:1px solid #11c1f3;
 				margin-bottom:3px;
 			}
 
 			&>div {
 				margin-bottom: 20px;
+				background: #007AFF !important;
+				border-radius: 10px !important;
 				.img {
-					display:inline-block;
-					width:50px;
-					height:50px;
-					background:#fff;
-					border-radius:50%;
-					margin-bottom:-25px;
-					border:2px solid $blue;
-					z-index:100;
-					position:relative;
+					display:none;
 				}
 				.name {
-					display:inline-block;
-					padding: 17px 0px 6px 5px;
-					margin-top:-20px;
-					margin-right:-30px;
-					background-color:$blue;
-					color:#fff;
-					border-radius:15px 0 0 0;
-					font-size:13px;
-					position:relative;
-					width: 90%;
+					display:none;
 				}
 				.text {
 
 					div {
-						background-color:#fff;
-						display:inline-block;
-						padding: 15px;
-						width: 90%;
-						border-radius:10px 0 10px 10px;
-						z-index:10;
-						position:relative;
-						text-align:left;
-						font-size: 25px;
-						border: 2px solid #D22B0E;
+						padding: 10px;
+						color: white !important;
+						font-size: 12px;
 					}
 				}
 			}

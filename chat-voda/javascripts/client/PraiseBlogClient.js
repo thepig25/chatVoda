@@ -28,14 +28,30 @@ PraisePostService = {
 Template.praiseBlog.events({
 	'submit .newPraisePostForm': function(event) {
 		// This function is called when the new task form is submitted
-		var text = event.target.text.value;
+		if (event.target.text.value.length > 1) {
+			var text = event.target.text.value;
 
-		Meteor.call('addPost', text);
+			Meteor.call('addPost', text);
 
-		// Clear form
-		event.target.text.value = '';
-		// Prevent default form submit
+			// Clear form
+			event.target.text.value = '';
+			// Prevent default form submit
+		}
 		return false;
+	},
+	'keyup .addNewPraisePost': function(event) {
+		if (event.which === 13) {
+			// This function is called when the new task form is submitted
+			var text = event.target.value;
+			if (event.target.value.length > 1) {
+				Meteor.call('addPost', text);
+				// Clear form
+				event.target.value = '';
+				// Prevent default form submit
+			}
+			return false;
+
+		}
 	}
 });
 
@@ -79,13 +95,13 @@ Template.praiseBlog.helpers({
 
 });
 Template.showPlaudits2.onRendered(function () {
-	$(".chat-box").animate({ scrollTop: $(".chat-box")[0].scrollHeight }, 1000);
+	 $(".chat-box").scrollTop($(".chat-box")[0].scrollHeight);;
 });
 Template.showPlaudits.onRendered(function () {
-	$(".chat-box").animate({ scrollTop: $(".chat-box")[0].scrollHeight }, 1000);
+	 $(".chat-box").scrollTop($(".chat-box")[0].scrollHeight);
 });
 Template.praisePost.onRendered(function () {
-	$(".chat-box").animate({ scrollTop: $(".chat-box")[0].scrollHeight }, 1000);
+	$(".chat-box").scrollTop($(".chat-box")[0].scrollHeight);
 });
 
 Template.showPlaudits.helpers({

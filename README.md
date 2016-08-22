@@ -16,4 +16,10 @@ Open
  
 
 ```
+ ### Deploy
+ ```
+heroku config:set BUILDPACK_CLEAR_CACHE=1
+git push -f heroku master
+
+```
 
