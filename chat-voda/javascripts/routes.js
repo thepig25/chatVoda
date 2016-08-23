@@ -26,22 +26,4 @@ Router.map(function() {
 		},
 		loadingTemplate: 'loading'
 	});
-
-	this.route('yourPlaudits', {
-		path: '/yourPlaudits',
-		layoutTemplate: 'baseLayout',
-		waitOn: function(){
-			return Meteor.subscribe('praisePosts');
-		},
-		loadingTemplate: 'loading'
-	});
-
-	this.route('leaderboard', {
-		path: '/leaderboard',
-		layoutTemplate: 'baseLayout',
-		waitOn: function(){
-			return Meteor.subscribe('praisePosts');
-		},
-		loadingTemplate: 'loading'
-	});
 });

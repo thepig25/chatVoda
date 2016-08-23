@@ -55,11 +55,6 @@ Template.praiseBlog.events({
 	}
 });
 
-Template.myPosts.events({
-	'click .delete': function() {
-		Meteor.call('deletePraisePost', this._id);
-	}
-});
 
 //Helpers
 
@@ -125,74 +120,10 @@ Template.yourPlaudits.helpers({
 
 });
 
-Template.leaderboard.helpers({
-	praisePosts: function() {
-		return PraisePostService.praisePosts();
-	}
-
-});
-
-
-Template.myPosts.helpers({
-	isOwner: function() {
-		return this.owner === Meteor.userId();
-	},
-	createdAtFormatted: function() {
-		return moment(this.createdAt).format('MM/DD/YYYY, HH:MM');
-	}
-});
-
-Template.recievedPosts.helpers({
-	isMyPlaudit: function() {
-		return this.plaudit === Meteor.user().username;
-	},
-	createdAtFormatted: function() {
-		return moment(this.createdAt).format('MM/DD/YYYY, HH:MM');
-	}
-});
 
 Template.praisePost.helpers({
 	createdAtFormatted: function() {
 		return moment(this.createdAt).format('MM/DD/YYYY, HH:MM');
 	}
-});
-
-Template.leaderboard.helpers({
-	mostPraised: function() {
-		var plaudits = PraisePosts.find().fetch();
-
-		var groupedData = _.groupBy(_.pluck(plaudits, 'plaudit')),
-			sortedData = _.map(groupedData,function(item) {
-
-							return {
-								plauditLength: item.length,
-								plauditName: item[0]
-							};
-
-						}),
-			filtered = _.sortBy(sortedData, 'plauditLength'),
-			mostPraised = filtered.reverse();
-
-
-		return mostPraised;
-	},
-	mostRaised: function() {
-		var plaudits = PraisePosts.find().fetch();
-
-		var groupedData = _.groupBy(_.pluck(plaudits, 'username')),
-			sortedData = _.map(groupedData,function(item) {
-
-							return {
-								plauditLength: item.length,
-								plauditName: item[0]
-							};
-
-						}),
-			filtered = _.sortBy(sortedData, 'plauditLength'),
-			mostRaised = filtered.reverse();
-
-
-		return mostRaised;
-	},
 });
 
