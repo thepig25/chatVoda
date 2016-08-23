@@ -10,7 +10,7 @@
     height: 100px;
     position: fixed;
     bottom: 30px;
-    width: 90%;
+    width: 95%;
     padding-top: 10px;
 
 }
@@ -447,7 +447,10 @@ $lred:#E57373;
 				background: #d0cccc !important;
 				border-radius: 10px !important;
 				float: left;
-				width: 80%;
+				width: 95%;
+				@media (max-width: 768px) {
+					width: 80%;
+				}
 				.img {
 					display:none;
 				}
