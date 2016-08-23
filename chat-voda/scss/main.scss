@@ -306,7 +306,7 @@ $lred:#E57373;
 				margin-bottom: 20px;
 				background: #d0cccc !important;
 				border-radius: 10px !important;
-				float: left;
+				float: right;
 				width: 95%;
 				@media (max-width: 768px) {
 					width: 80%;
@@ -321,7 +321,7 @@ $lred:#E57373;
 
 					div {
 						padding: 10px;
-						color: white !important;
+						color: black !important;
 						font-size: 16pt;
 						@media (max-width: 768px) {
 							font-size: 10pt;
